@@ -1,0 +1,14 @@
+Status: active
+
+     To                         Action      From
+     --                         ------      ----
+[ 1] 22/tcp                     ALLOW IN    Anywhere
+[ 2] 21/tcp                     ALLOW IN    Anywhere
+[ 3] 40000:50000/tcp            ALLOW IN    Anywhere
+[ 4] 21 on eth1                 DENY IN     Anywhere
+[ 5] 40000:50000/tcp on eth1    DENY IN     Anywhere
+[ 6] 22/tcp (v6)                ALLOW IN    Anywhere (v6)
+[ 7] 21/tcp (v6)                ALLOW IN    Anywhere (v6)
+[ 8] 40000:50000/tcp (v6)       ALLOW IN    Anywhere (v6)
+[ 9] 21 (v6) on eth1            DENY IN     Anywhere (v6)
+[10] 40000:50000/tcp (v6) on eth1 DENY IN     Anywhere (v6)

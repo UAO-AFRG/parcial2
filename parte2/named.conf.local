@@ -1,0 +1,13 @@
+// Zona directa (empresa.local)
+zone "empresa.local" {
+    type slave;
+    masters { 192.168.50.2; };   // IP del servidor maestro
+    file "/var/cache/bind/db.empresa.local";
+};
+
+// Zona inversa
+zone "50.168.192.in-addr.arpa" {
+    type slave;
+    masters { 192.168.50.2; };
+    file "/var/cache/bind/db.192";
+};

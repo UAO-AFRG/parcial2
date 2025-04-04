@@ -1,0 +1,11 @@
+*nat
+:PREROUTING ACCEPT [0:0]
+:POSTROUTING ACCEPT [0:0]
+
+-A PREROUTING -s 192.168.50.0/24 -d 192.168.50.4 -p udp --dport 53 -j DNAT --to-destination 192.168.50.3
+-A PREROUTING -s 192.168.50.0/24 -d 192.168.50.4 -p tcp --dport 53 -j DNAT --to-destination 192.168.50.3
+
+
+-A POSTROUTING -s 192.168.50.0/24 -j MASQUERADE
+
+COMMIT
